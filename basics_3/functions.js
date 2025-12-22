@@ -18,9 +18,9 @@ function sayMyName() {
 // }
 
 function addTwoNumbers(number1, number2) {
-//   let sum = number1 + number2;
-//   return sum;  //  after return statement function will stop executing
-    return number1 + number2;
+  //   let sum = number1 + number2;
+  //   return sum;  //  after return statement function will stop executing
+  return number1 + number2;
 }
 
 const result = addTwoNumbers(3, 5); //  when u call the function and pass the values so those values are called arguments
@@ -38,10 +38,10 @@ const result = addTwoNumbers(3, 5); //  when u call the function and pass the va
 // console.log(loginUserMessage2('Hassan'));
 
 function loginUserMessage2(username) {
-    // if (username === undefined) {
-    if (!username) {
-        return "Username is required";
-    }
-    return `Welcome back, ${username}!`;
+  // if (username === undefined) {
+  if (!username) {
+    return "Username is required";
+  }
+  return `Welcome back, ${username}!`;
 }
-console.log(loginUserMessage2());
+// console.log(loginUserMessage2());
