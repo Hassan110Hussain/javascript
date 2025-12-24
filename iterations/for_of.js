@@ -32,8 +32,8 @@ const myObject = {
   name: "Hassan",
   age: 25,
   city: "Karachi",
-}
+};
 
 // for (const [key, value] of myObject) {
 //   console.log(`${key}: ${value}`);
-// }  //  not working on objects
+// }  //  objects isnt iterable like this
