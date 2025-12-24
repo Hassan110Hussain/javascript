@@ -23,7 +23,7 @@ if (score > 100) {
 
 const balance = 1000;
 
-// if (balance > 500) console.log('test'), console.log('test2');  //  not professional, use scope {}
+// if (balance > 500) console.log('test'), console.log('test2');  //  not professional, use scope {} and never use ,
 
 // if (balance < 500) {
 //   console.log('yes its a two');
