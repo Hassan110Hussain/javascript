@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket n Code || DOM Updation</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <ul class="bowlers" style="font-size: large">
+      <li>Wasim Akram</li>
+      <li>Glenn McGrath</li>
+    </ul>
+  </body>
+  <script>
+    //  add
+    function addBowler(bowlerName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${bowlerName}`;
+      document.querySelector(".bowlers").appendChild(li);
+    }
+    addBowler("Dale Steyn");
+    addBowler("James Anderson");
+
+    // little better approach
+    function addOptiBowler(bowlerName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(bowlerName));
+      document.querySelector(".bowlers").appendChild(li);
+    }
+    addOptiBowler("Mohd Amir");
+
+    // edit
+    const secondbowler = document.querySelector("li:nth-child(2)");
+    // secondbowler.innerHTML = 'Cutlery Ambrose'
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mitchell Starc";
+    secondbowler.replaceWith(newLi);
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Shaun Pollock</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+  </script>
+</html>
