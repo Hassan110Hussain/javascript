@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: antiquewhite;
+      }
+
+      ul {
+        display: flex;              /* 👈 flex row */
+        gap: 15px;                  /* space between images */
+        list-style: none;           /* remove bullets */
+        padding: 0;
+      }
+
+      img {
+        width: 400px;               /* control size */
+        height: 600px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Amazing images</h2>
+    <div>
+      <ul>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/04/c0/6f/04c06f3b835a596711e52eb3537f856c.jpg"
+            id="one"
+            alt="tom"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/14/99/5e/14995e6f85e1f6a6dc0311ae7178c1b8.jpg"
+            id="two"
+            alt="car"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/54/a9/a5/54a9a5c897d77d5494978665c0b3e818.jpg"
+            id="three"
+            alt="john"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.pinimg.com/736x/45/a9/55/45a9554817e76a40dbe2d2a89930d7eb.jpg"
+            id="four"
+            alt="virat"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById('two').onclick = function () {
+    //     alert('hyper car')
+    // }
+
+    document.getElementById('three').addEventListener
+  </script>
+</html>
