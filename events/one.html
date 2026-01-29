@@ -12,14 +12,14 @@
       }
 
       ul {
-        display: flex;              /* 👈 flex row */
-        gap: 15px;                  /* space between images */
-        list-style: none;           /* remove bullets */
+        display: flex; /* 👈 flex row */
+        gap: 15px; /* space between images */
+        list-style: none; /* remove bullets */
         padding: 0;
       }
 
       img {
-        width: 400px;               /* control size */
+        width: 400px; /* control size */
         height: 600px;
         object-fit: cover;
         border-radius: 8px;
@@ -31,7 +31,7 @@
   <body>
     <h2>Amazing images</h2>
     <div>
-      <ul>
+      <ul id="images">
         <li>
           <img
             src="https://i.pinimg.com/736x/04/c0/6f/04c06f3b835a596711e52eb3537f856c.jpg"
@@ -68,6 +68,35 @@
     //     alert('hyper car')
     // }
 
-    document.getElementById('three').addEventListener
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented, target, toElement, currentTarget, srcElement, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode
+
+    // document.getElementById("images").addEventListener("click", function (e) {
+    //   console.log('john wick');
+    // }, false);
+
+    // document.getElementById("four").addEventListener("click", function (e) {
+    //   console.log('virat kohli');
+    //   e.stopPropagation();
+    // }, false);   // true => capturing, false => bubbling
+
+    // document.getElementById("one").addEventListener("click", function (e) {
+    //   e.preventDefault()
+    //   e.stopPropagation();
+    //   console.log('tom sleeping');
+    // }, false);
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+
+    // removeIt.parentNode.removeChild(removeIt);
   </script>
 </html>
