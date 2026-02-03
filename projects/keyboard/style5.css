@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.color {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 350px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: center;
+}
+
+th {
+    background: rgba(0, 255, 255, 0.15);
+    color: #00ffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+td {
+    font-size: 1.05rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
