@@ -1,20 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advance_concepts</title>
 </head>
-<body style="background-color: black; color: aqua;">
-    Value	State	Description
-0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
+
+<body style="background-color: #000; color: aqua; font-family: Arial, sans-serif; padding: 20px;">
+
+    <h1>XMLHttpRequest ReadyState Explanation</h1>
+
+    <p>
+        This example demonstrates how <strong>XMLHttpRequest</strong> works and how
+        <code>readyState</code> changes during an API request.
+    </p>
+
+    <h2>ReadyState Values</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Value</th>
+            <th>State</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>UNSENT</td>
+            <td>Client has been created. open() not called yet.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>OPENED</td>
+            <td>open() has been called.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>HEADERS_RECEIVED</td>
+            <td>send() has been called, headers and status are available.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LOADING</td>
+            <td>Downloading; responseText holds partial data.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>DONE</td>
+            <td>The operation is complete.</td>
+        </tr>
+    </table>
+
+    <h2>What to do</h2>
+    <ul>
+        <li>Open the browser console</li>
+        <li>Press <strong>F12</strong></li>
+        <li>Go to the <strong>Console</strong> tab</li>
+        <li>Watch <code>readyState</code> values being logged</li>
+    </ul>
+
 </body>
 
+
 <script>
-    
+    const requestURL = 'https://api.github.com/users/Hassan110Hussain'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestURL)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data.followers);
+        }
+    }
+    xhr.send()
 </script>
+
 </html>
