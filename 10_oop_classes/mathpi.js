@@ -1,4 +1,4 @@
-const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI')
+const descriptor = Object.getOwnPropertyDescriptor(Math, "PI");
 
 // console.log(descriptor);
 
@@ -6,18 +6,28 @@ const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI')
 // Math.PI = 6
 // console.log(Math.PI);
 
-const coffee  = {
-    name: 'latte',
-    price: '450',
-    isAvailable: true
-}
+const coffee = {
+  name: "latte",
+  price: "450",
+  isAvailable: true,
 
-console.log(coffee);
-console.log(Object.getOwnPropertyDescriptor(coffee, 'name'));
+  orderCoffee: function () {
+    console.log("coffee ka off scene hai");
+  },
+};
+
+// console.log(coffee);
+// console.log(Object.getOwnPropertyDescriptor(coffee, 'name'));
 
 Object.defineProperty(coffee, 'name', {
-    writable: false,
-    enumerable: false,
+    // writable: false,
+    enumerable: true,
 })
 
 console.log(Object.getOwnPropertyDescriptor(coffee, 'name'));
+
+for (let [key, value] of Object.entries(coffee)) {
+  if (typeof value !== "function") {
+    console.log(`${key} : ${value}`);
+  }
+}
